@@ -17,12 +17,12 @@ const Summary = () => {
   const totalPrice = items.reduce((total, item) => total +Number(item.price), 0);
 
   useEffect(() => {
-    if (searchParams.get("success") === "true") {
+    if (searchParams.get("success")) {
       toast.success("Order placed successfully!");
       removeAll();
     }
 
-    if (searchParams.get("canceled") === "true") {
+    if (searchParams.get("canceled")) {
       toast.error("Something went wrong.");
     }
   },[searchParams,removeAll])
