@@ -46,7 +46,7 @@ const Summary = () => {
           </div>
         </div>
       </div>
-      <Button onClick={onCheckout} className="mt-6 w-full">Checkout</Button>
+      <Button disabled={items.length === 0} onClick={onCheckout} className="mt-6 w-full">Checkout</Button>
     </div>
   );
 };
